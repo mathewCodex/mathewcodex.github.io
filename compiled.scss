@@ -1,0 +1,779 @@
+
+
+
+
+// Hamburger section////
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,700,500,300);
+
+// .hamburger{
+//   width: 4vw;
+//   margin: 10px auto 10px;
+//   position:relative;
+//   height:30px;
+//   object-fit: contain;
+//   display:block;
+//   z-index:99;
+//   transition: linear 0.5s all;
+    
+// }
+
+
+
+
+$primary-color: #243040;
+
+body {
+	font-family: 'Architects Daughter', sans-serif;
+}
+// .hamburger{
+//   width: 4vw;
+//   margin: 80px auto 40px;
+//   position:relative;
+//   height:30px;
+//   object-fit: contain;
+//   display:block;
+//   z-index:99;
+//   transition: linear 0.5s all;
+//   left: 30px;
+// }
+.hamburger {
+	position: fixed;
+	z-index: 4;
+	top: 30px;
+	left: 30px;
+	width: 30px;
+	height: 25px;
+    object-fit: contain;
+	cursor: pointer;
+	user-select: none;
+	span {
+		position: relative;
+		
+		&, &:before, &:after {
+			display: block;
+			width: 45px;
+			height: 6px;
+			background-color: $primary-color;
+			border-radius: 2px;
+      
+		}
+		
+		&:before, &:after {
+			content: '';
+			position: absolute;
+		}
+		&:before { bottom: -14px; }
+		&:after {	bottom: -28px; }
+		
+	}
+}
+#paper-back {
+	width: 100%;
+	height: 100vh;
+	background-color: $primary-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	font-size: 33px;
+	nav {
+		padding: 120px 34px;
+		a {
+			display: block;
+			margin-bottom: 25px;
+			text-decoration: none;
+			color: rgba(white, 0.7);
+      &:hover {
+          color: #db5523;
+          border-bottom: 2px solid #db5523;
+          transition: linear 0.5s all;
+          transform: scale(1.10);
+          font-weight: 500;
+        }
+		}
+	}
+   
+}
+
+//prevents the scrolling when the menu is open
+#paper-window {
+	height: 100vh;
+	width: 100vw;
+	position: relative; 
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 2;
+	
+	&.tilt {
+		overflow: hidden;
+		pointer-events: none;
+       transition: 1s ease;
+		#paper-front { transform: rotate(5deg) translateZ(0); }
+	}
+  
+}
+
+//this is what actually rotates
+#paper-front {
+	pointer-events: auto;
+	position: relative;
+	z-index: 3;
+	background-color: rgb(27, 16, 16);
+	box-shadow: 0 0 20px rgba(black, 0.7);
+	transform-origin: center 70%;
+	transition: all 0.6s ease;
+}
+
+//actual content
+// #container {
+// 	section {
+// 		height: 600px;
+// 		text-align: center;
+// 		&:first-of-type {
+// 			padding-top: 10vh;	
+// 			h1 { font-size: 45px; }
+// 			p { font-size: 25px; }
+// 			@media (max-width: 600px) {
+// 				padding-top: 15vh;	
+// 				h1 { font-size: 30px; }
+// 				p { font-size: 18px; }
+// 			}
+// 		}
+   
+// 		&:nth-of-type(2n) {
+// 			background-color: lighten($primary-color, 75%);
+
+// 		}
+    
+// 	}
+// }
+
+
+.social {
+  display: block;
+  width: 70%;
+  margin: 25px auto;
+  text-align: center;
+  font-size: 0;
+  li {
+    display: inline;
+    width: 25%;
+   text-align: center;
+    a {
+      text-align: left;
+      color: #000;
+      font-size: 25px;
+      left:30px;
+      transition: linear 0.5s all;
+      &:hover {
+        color: #db5523;        
+        transition: linear 0.5s all;
+      }
+    }
+  }  
+}
+// /////////////////////////////////////////NAV  END
+
+.blog-slider {
+    width: 90%;
+  position: relative;
+    max-width: 800px;
+    margin: auto;
+    background: #1a1313;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 5px;
+    border-radius: 25px;
+    height: 400px;
+  transition: all .3s;
+  
+  
+   
+  @media screen and (max-width: 992px) {
+    max-width: 680px;
+        height: 400px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    min-height: 500px;
+    height: auto;
+    margin: 180px auto;
+  }
+  
+  
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+        height: 350px;
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+    
+    &.swiper-slide-active {
+      .blog-slider__img {
+        img {
+          opacity: 1;
+        transition-delay: .3s;
+        }
+      }
+      .blog-slider__content {
+        > * {
+      
+        opacity: 1;
+        transform: none;
+
+      @for $i from 0 to 15 {
+        &:nth-child(#{$i + 1}) {
+          transition-delay: $i * 0.1 + 0.3s;
+        }
+      }
+
+    }
+      }
+    }
+    
+  }
+  
+  &__img {
+     // width: 40%;
+    width: 300px;
+    flex-shrink: 0;
+    height: 300px;
+    background-image: linear-gradient(147deg, #06191e72 0%, #1d4a60 74%);
+    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+    border-radius: 20px;
+    transform: translateX(-80px);
+   
+    overflow: hidden;
+    
+    &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(147deg, #0f1517d7 0%, #06141dd6 74%);
+      border-radius: 20px;
+    opacity: 0.8;
+}
+    
+    img {
+      width: 100%;
+    height: 100%;
+    object-fit: cover;
+      display: block;
+       opacity: 0;
+      border-radius: 20px;
+    transition: all .3s;
+    }
+    
+    
+    @media screen and (max-width: 992px) {
+      // width: 45%;
+    }
+    @media screen and (max-width: 768px) {
+    transform: translateY(-50%);
+      width: 90%;
+  }
+    @media screen and (max-width: 576px) {
+      width: 95%;
+    }
+     @media screen and (max-height: 500px) and (min-width: 992px) {
+        height: 270px;
+  }
+  }
+  
+  &__content {
+    // width: 60%;
+    padding-right: 25px;
+    @media screen and (max-width: 992px) {
+      // width: 55%;
+    }
+    @media screen and (max-width: 768px) {
+          margin-top: -80px;
+    text-align: center;
+    padding: 0 30px;
+    }
+    
+    @media screen and (max-width: 576px) {
+      padding: 0
+    }
+    > * {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all .4s;
+      
+      
+    }
+    
+  }
+  
+  &__code {
+    color: #7b7992;
+    margin-bottom: 15px;
+    display: block;
+    font-weight: 500;
+  }
+  
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #b1b1b6;
+    margin-bottom: 20px;
+  }
+  
+  &__text {
+    color: #5f5c72;
+    margin: auto;
+    line-height: 1.5em;
+  }
+  
+  &__button {
+        display: inline-flex;
+    background-image: linear-gradient(147deg, #64c6fb 0%, #de6060 74%);
+    padding: 15px 35px;
+    border-radius: 50px;
+    color: #fff;
+    box-shadow: 0px 14px 80px rgb(111, 199, 253);
+    text-decoration: none;
+    font-weight: 500;
+        justify-content: center;
+    text-align: center;
+    letter-spacing: 1px;
+    @media screen and (max-width: 576px) {
+      width: 15vw;
+    }
+    
+  }
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    
+}
+  &__pagination {
+   position: absolute;
+    z-index: 21;
+    right: 20px;
+    width: 11px!important;
+    text-align: center;
+    left: auto!important;
+    top: 50%;
+    bottom: auto!important;
+    transform: translateY(-50%);
+    @media screen and (max-width: 768px) {
+     transform: translateX(-50%);
+          left: 50%!important;
+      top: 205px;
+    width: 100%!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+     &.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 8px 0;
+       @media screen and (max-width: 768px) {
+         margin: 0 5px;
+       }
+}
+    
+    .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    display: block;
+    border-radius: 10px;
+    background: #b3bac0;
+    opacity: 0.2;
+      transition: all .3s;
+      &-active {
+    opacity: 1;
+    background: #3dcbf2;
+    height: 30px;
+    box-shadow: 0px 0px 20px rgb(128, 203, 249);
+        
+        @media screen and (max-width: 768px) {
+          height: 11px;
+          width: 30px;
+        }
+}
+}
+    
+  }
+  
+}
+
+
+// /////////////////////////////----------------------SWIPER SLIDER SECTION----////
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+:root {
+	--card-width: 200px;
+	--card-height: 300px;
+
+	--card-transition-duration: 800ms;
+	--card-transition-easing: ease;
+}
+
+
+
+
+
+ .sectionSlider{
+	width: 100vw;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.787);
+	overflow: hidden;
+}
+button{
+	border: none;
+	background: none;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+		border: none;
+	}
+}
+
+.app {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -5;
+		filter: blur(8px);
+		pointer-events: none;
+		-webkit-user-select: none;
+		user-select: none;
+		overflow: hidden;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			z-index: 1;
+			opacity: 0.8;
+		}
+        
+		&__image {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) translateX(var(--image-translate-offset, 0));
+			width: 180%;
+			height: 180%;
+			transition: transform 1000ms ease, opacity 1000ms ease;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&.current--image {
+				opacity: 1;
+				--image-translate-offset: 0;
+			}
+			&.previous--image,
+			&.next--image {
+				opacity: 0;
+			}
+			&.previous--image {
+				--image-translate-offset: -25%;
+			}
+			&.next--image {
+				--image-translate-offset: 25%;
+			}
+		}
+	}
+}
+
+.cardList {
+	position: absolute;
+	width: calc(3 * var(--card-width));
+	height: auto;
+
+	&__btn {
+		--btn-size: 35px;
+		width: var(--btn-size);
+		height: var(--btn-size);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 100;
+      
+		&.btn--left {
+			left: -5%;
+		}
+		&.btn--right {
+			right: -5%;
+		}
+         @media screen and (max-width: 600px) {
+            &.btn--left {
+			left: 15%;
+		}
+		&.btn--right {
+			right: 14%;
+		}
+         }
+		.icon {
+			width: 100%;
+			height: 100%;
+			svg {
+				width: 100%;
+				height: 100%;
+            
+			}
+		}
+	}
+
+	.cards__wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+    left: -4.5rem;
+		perspective: 1000px;
+	}
+}
+
+.card {
+	--card-translateY-offset: 100vh;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) translateX(var(--card-translateX-offset))
+		translateY(var(--card-translateY-offset)) rotateY(var(--card-rotation-offset))
+		scale(var(--card-scale-offset));
+	display: inline-block;
+	width: var(--card-width);
+	height: var(--card-height);
+	transition: transform var(--card-transition-duration)
+		var(--card-transition-easing);
+		-webkit-user-select: none;
+	user-select: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		z-index: 1;
+		transition: opacity var(--card-transition-duration)
+			var(--card-transition-easing);
+		opacity: calc(1 - var(--opacity));
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&.current--card {
+		--current-card-rotation-offset: 0;
+		--card-translateX-offset: 0;
+		--card-rotation-offset: var(--current-card-rotation-offset);
+		--card-scale-offset: 1.2;
+		--opacity: 0.8;
+	}
+
+	&.previous--card {
+		--card-translateX-offset: calc(-1 * var(--card-width) * 1.1);
+		--card-rotation-offset: 25deg;
+	}
+
+	&.next--card {
+		--card-translateX-offset: calc(var(--card-width) * 1.1);
+		--card-rotation-offset: -25deg;
+	}
+
+	&.previous--card,
+	&.next--card {
+		--card-scale-offset: 0.9;
+		--opacity: 0.4;
+	}
+}
+
+.infoList {
+	position: absolute;
+	width: calc(3 * var(--card-width));
+	height: var(--card-height);
+	pointer-events: none;
+
+	.info__wrapper {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	}
+}
+
+.info {
+	margin-bottom: calc(var(--card-height) / 8);
+	margin-left: calc(var(--card-width) / 1.5);
+	transform: translateZ(2rem);
+	transition: transform var(--card-transition-duration)
+		var(--card-transition-easing);
+	.text {
+		position: relative;
+		font-family: "Montserrat";
+		font-size: calc(var(--card-width) * var(--text-size-offset, 0.2));
+		white-space: nowrap;
+		color: #fff;
+		width: -moz-fit-content;
+		width: fit-content;
+	}
+
+	.name,
+	.location {
+		text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: normal;
+	}
+
+	.location {
+		font-weight: 800;
+        font-size: 1em;
+	}
+
+	.location {
+		--mg-left: 40px;
+		--text-size-offset: 0.12;
+		font-weight: 600;
+		margin-left: var(--mg-left);
+		margin-bottom: calc(var(--mg-left) / 2);
+		padding-bottom: 0.8rem;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background: #fff;
+			left: 0%;
+			transform: translate(calc(-1 * var(--mg-left)), -50%);
+		}
+		&::before {
+			top: 50%;
+			width: 20px;
+			height: 5px;
+		}
+		&::after {
+			bottom: 0;
+			width: 60px;
+			height: 2px;
+		}
+	}
+
+	.description {
+		--text-size-offset: 0.065;
+		font-weight: 400;
+        display: flex;
+        text-align: left;
+        margin: auto;
+
+	}
+
+	&.current--info {
+		opacity: 1;
+		display: block;
+	}
+	&.previous--info,
+	&.next--info {
+		opacity: 0;
+		display: none;
+	}
+}
+
+.loading__wrapper {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	z-index: 200;
+	.loader--text {
+		color: #fff;
+		font-family: "Montserrat";
+		font-weight: 500;
+		margin-bottom: 1.4rem;
+	}
+	.loader {
+		position: relative;
+		width: 200px;
+		height: 2px;
+		background: rgba(255, 255, 255, 0.25);
+		span {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgb(255, 0, 0);
+			transform: scaleX(0);
+			transform-origin: left;
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	:root {
+		--card-width: 250px;
+		--card-height: 400px;
+	}
+}
+
+.support {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+	display: flex;
+	a {
+		margin: 0 10px;
+		color: #fff;
+		font-size: 1.8rem;
+		backface-visibility: hidden;
+		transition: all 150ms ease;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
+// /// ----------------------END OF SLIDER SECTION----------////

@@ -8,14 +8,57 @@
     <link rel="stylesheet" href="landing.css" />
     <script src="http://kit.font-awesome.com/a076d05299.js"></script>
     <link rel="shortcut icon" href="cv1pgitprofile.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/all.css" />
+    <!-- <link rel="stylesheet" href="css/all.css" /> -->
+    <link rel="stylesheet" href="compiled.css">
     <link rel="stylesheet" href="landingquery.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- hamburger lib -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Swiper lib -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap%22rel=%22stylesheet">
+    <!-- end of swiper lib -->
     <script src="functions.js" defer></script>
   </head>
   <body>
-    <div class="darkness">
-      <!-- <img src="./P-imgs/coding-icon.jpg" alt="svg-coding icon"  /> -->
 
+ <!-- Hamburger -->
+   
+      
+      <div id="paper-back">
+	<nav>
+		<div class="close"></div>
+		<a href="index.html">Home</a>
+		<a href="About.html">Aboutme</a>
+		<a href="https://dom-site.netlify.app/">My Work</a>
+		<a href="https://drive.google.com/file/d/1HEUdq8O1xXM5ExO9t7IwVquLJLJGsjCN/view?usp=share_link">Resume</a>
+    <ul class="social">
+    <li><a href="https://github.com/mathewCodex" aria-label="github"> <img src="gitIcon.png" alt="linkedIn-icon" class="icon-size" /></a></li>
+    <li><a href="https://twitter.com/mathew4codex" aria-label="tweet"> <img src="tweet.gif" alt="linkedIn-icon" class="icon-size" /></a></li>
+   <li> <a href="https://www.facebook.com/VladislavKirbaba" aria-label="linked">       <img
+              src="icons8-linkedin-circled.gif"
+              alt="linkedIn-icon"
+              class="icon-size"
+            /></a></li>
+    <li><a href="mathewemmanuel212@gmail.com">
+            <img src="gmail.png" alt="gmail-icon" class="icon-size" />
+          </a></li>
+  </ul>
+	</nav>
+</div>
+<div id="paper-window">
+	<div id="paper-front">
+		<div ><span><image src="./hamburger.png" alt="Hamburger" class="hamburger" /></span></div>
+		<div id="container">
+			<div class="darkness">
+      <!-- <img src="./P-imgs/coding-icon.jpg" alt="svg-coding icon"  /> -->
+     
       <div class="hello1">
         <h1 class="hello">
           <!-- <div class="icon-code">
@@ -25,11 +68,10 @@
           <p class="typing"></p>
 
           <p class="typing1">
-            CodeName => ("Mathew<span class="span1">Codex</span>"),<br />
-            I'm a frontEnd developer<br />
-            that uses Node.js as a Backend.<br />
-            To Create minimal & functional website,<br />
-            Powered by the latest <em class="line">Technologies</em>
+            CodeName => ("mathew<span class="span1">Codex</span>"),<br />
+            I'm a software developer<br />
+            that Create minimal & functional web applications,<br />
+            Powered by the latest <em class="line">Technologies</em>"
           </p>
 
           <br />
@@ -53,6 +95,12 @@
     </div>
     <br />
 
+  
+    
+   
+
+ 
+   <!-- Hamburger -->
     <div class="colors tooltip">
       <li class="nav__item">
         <a class="nav__link" id="nav__link" href="index.html">Home</a>
@@ -87,130 +135,166 @@
     </div>
     <br />
     <br />
-    
-    <section id="projects">
-      <div class="row">
-        <div class="grid">
-          <!-- The four columns  for lower screen-->
-          <div class="row1">
-            <div class="column">
-              
-                <img
-                  src="IMG_6633.JPG"
-                  alt="HTML/CSS"
-                  style="width: 100%; height: auto"
-                  ;
-                  onload="myFunction(this);"
-                />
-                <p class="P-Name">HTML/CSS</p>
-              
-            </div>
-
-            <div class="column">
-             
-                <img
-                  src="js.JPG"
-                  alt="JS"
-                  onclick="myFunction(this);"
-                  style="width: 100%; height: 13vw"
-                  ;
-                />
-              
-
-              <p class="P-Name">JS</p>
-            </div>
-
-            <div class="column">
-             
-                <img
-                  src="Node.PNG"
-                  alt="NODE.js"
-                  style="width: 100%; height: 13vw"
-                  onclick="myFunction(this);"
-                />
-              
-              <p class="P-Name">Node.js</p>
-            </div>
-            <div class="column">
-              
-                <img
-                  src="react2.JPG"
-                  alt="React"
-                  style="width: 100%; height: 13vw"
-                  onclick="myFunction(this);"
-                />
-              
-              <p class="P-Name">React</p>
-            </div>
-          </div>
-          <div class="container" onload="myfunction(this);">
-            <span
-              onclick="this.parentElement.style.display='none'"
-              class="closebtn"
-              >&times;</span
-            >
-            <img
-              id="expandedImg"
-              class="imgContainer"
-              onload="myFunction(this);"
-            />
-            <div id="imgtext"></div>
-          </div>
-
-          <div class="column1">
-            <a href="https://gridfolio.netlify.app">
-              <img src="h5c3.JPG" alt="html/css" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi,
-                quasi.
-              </p>
-            </a>
-          </div>
-          <a href="https://self-destructing.netlify.app/">
-            <div class="column2">
-              <img src="csscode.JPG" class="hovered-image" />
-            </div>
-          </a>
-
-          <br />
-          <div class="column3">
-            <img src="react2.JPG" class="hovered-image" />
-          </div>
-
-          <div class="column4">
-            <img src="Node.PNG" class="hovered-image" alt="node.js-image" />
-          </div>
-
-          <div class="column5">
-            <a href="https://mathewrecipeapi.netlify.app/?"
-              ><img src="secureg.JPG" class="hovered-image" alt="javscript-img"
-            /></a>
-          </div>
-          <br />
-        </div>
+    <!-- adding section card -->
+     
+  <div class="blog-slider">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="https://www.templateonweb.com/upload/web/templates/screenshots/thumbnails_800/77-recipe-page.jpg" alt="">
       </div>
-    </section> 
-    <!-- Section for stacked images -->
-    <div class="team-section">
-      <div class="team">
-        <div><h2 class="meet">Meet My Stacks</h2></div>
-      </div>
-      <div class="containerStack">
-        <img src="maxresdefault.jpg" style="--angle: 0deg" alt="HTML/Css" />
-        <img src="javascript-logo.png" style="--angle: 45deg" alt="Javascript" />
-        <img src="nodejs.jpg" style="--angle: 90deg" alt="Nodejs" />
-        <img src="react.jpg" style="--angle: 180deg" alt="React" />
-        <img src="my-face2.jpg" style="--angle: -90deg" alt="" />
-        <img
-          src="Typescript_logo_2020.svg.png"
-          style="--angle: -45deg"
-          alt="TypeScript"
-        />
-        <img src="next-js-30.png" style="--angle: -140deg" alt="Nextjs" />
-        <img src="git.png" style="--angle: 140deg" alt="git" />
+      <div class="blog-slider__content">
+        <span class="blog-slider__code" id="getDate"></span>
+        <div class="blog-slider__title"  >Recipe APP</div>
+        <div class="blog-slider__text">A recipe app that uses spoonacular API to
+      display data integrated by using javascript to create powerful functions for Users with a search function for finding over 100,000 recipe and a details of cooking process. Yummy 😛 </div>
+        <a href="https://mathewrecipeapi.netlify.app" class="blog-slider__button">Visit App</a>
       </div>
     </div>
-    <!-- end of section for stacked images -->
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://ugem-production.s3.amazonaws.com/uploads/articleimage/file/328/ugem_dis_concept_2x.png" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code " id="getDate1"></span>
+        <div class="blog-slider__title">Bank App</div>
+        <div class="blog-slider__text">A static frontend logical bank application that performs basic frontend function of a bank applications such as transaction, loaning and lots more, using javascript to create this UI functions theres no database for Handling data.</div>
+        <a href="https://my-bank.netlify.app" class="blog-slider__button">Visit APP</a>
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code"id="getDate2"></span>
+        <div class="blog-slider__title">Blog APP</div>
+        <div class="blog-slider__text">This is a react based blog that performs basic CRUD operation to a blog with a mini database</div>
+        <a href=https://github.com/mathewCodex" class="blog-slider__button">View CODE</a>
+      </div>
+    </div>
+    
+     <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="https://cdn-imgix.headout.com/tour/29760/TOUR-IMAGE/90b3f190-2134-4297-b31b-67e36cf3c45d-15925-new-york-highlights-of-brooklyn-bridge-bike-tour-01-4-.jpg?w=1200&h=750&auto=compress%2Cformat&crop=faces&fit=min" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code localTime" id="getDate3">26 December 2019</span>
+        <div class="blog-slider__title">Tour APP</div>
+        <div class="blog-slider__text">This is a powerful application built with nodejs, express,and mongodb as the NOsql database that display available tour locations using lng,lat geoloction stored by the user and diplay location with mapboxgl as the API, datarendering from server to client and also provide payment process using stripe and a lot of fullStack features.😎 </div>
+        <a href="https://github.com/mathewCodex/Tours" class="blog-slider__button">View CODE</a>
+      </div>
+    </div>
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
+    <!-- end of it -->
+<!-- Swipeer slider section -->
+
+
+   <div class="sectionSlider">
+<div class="app">
+
+	<div class="cardList">
+		<button class="cardList__btn  btn--left" >
+			<div class="icon">
+				<svg>
+					<use xlink:href="#arrow-left"></use>
+				</svg>
+			</div>
+		</button>
+
+		<div class="cards__wrapper">
+			<div class="card current--card">
+				<div class="card__image">
+					<img src="./codejs.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="card next--card">
+				<div class="card__image">
+					<img src="https://tco.am/blog/wp-content/uploads/2018/11/backend-development.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="card previous--card">
+				<div class="card__image">
+					<img src="./reactimage.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+    
+		<button class="cardList__btn  btn--right" id="right-btn" class="btn">
+			<div class="icon">
+				<svg>
+					<use xlink:href="#arrow-right"></use>
+				</svg>
+			</div>
+		</button>
+	</div>
+
+	<div class="infoList">
+		<div class="info__wrapper">
+			<div class="info current--info">
+				<h1 class="text name">javascript / C / shell</h1>
+				<h4 class="text location">Language</h4>
+				<p class="text description">Js as my primary language is one <br>
+          of my most confidential tool<br> I used to create functions in UI. <br>As I am also a working progress in C ,<br> I am confident in using bash and writing shell codes. <br>
+          version controls git and github </p>
+			</div>
+
+			<div class="info next--info">
+				<h1 class="text name">NODEjs</h1>
+				<h4 class="text location">Backend</h4>
+				<p class="text description">Learning NODEjs had made me to be termed <br>as a MERN STACK dev,<br> due to its scalable, powerful and consiced MVC approach<br> I find it comfortable,effiecient and interesting <br>to use in creating my <br>Fullstack MERN applications.</p>
+			</div>
+
+			<div class="info previous--info">
+				<h1 class="text name">REACT/Ts - nextjs</h1>
+				<h4 class="text location">Front-end and library</h4>
+				<p class="text description">Frameworks and library are  like a dream come<br> true for developers in all tech fields as a developer<br> I am greatfull for the community<br> that developed react and TS and others<br> which has been a great tool in both frontend <br> and backend applications ,<br>Learning this tools was and is fun as<br> I used them to created scalable , <br>fullstack and typed safe code for my application <br>within a reasonable time range and effieciency.</p>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="app__bg">
+		<div class="app__bg__image current--image">
+			<img src="./codejs.jpg" alt="" />
+		</div>
+		<div class="app__bg__image next--image">
+			<img src="https://tco.am/blog/wp-content/uploads/2018/11/backend-development.jpg" alt="" />
+		</div>
+		<div class="app__bg__image previous--image">
+			<img src="./reactimage.jpg" alt="" />
+		</div>
+	</div>
+</div>
+
+<div class="loading__wrapper">
+	<div class="loader--text">Loading...</div>
+	<div class="loader">
+		<span></span>
+	</div>
+</div>
+
+<svg class="icons" style="display: none;">
+	<symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+		<polyline points='328 112 184 256 328 400'
+					 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+	</symbol>
+	<symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+		<polyline points='184 112 328 256 184 400'
+					 style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+	</symbol>
+</svg>
+
+</div> 
+
+<!-- End of swiper slider section -->
     <section class="my-Sec " id="transit">
  <div class="row2">
     <div class="col content-col header__text">
@@ -287,12 +371,291 @@
           </a>
         </li>
 
-        <p>&copy;<span>2022</span>mathew emmanuel. all rights reserved</p>
+        <p>&copy;<span id="getYear">2022</span> mathew emmanuel. all rights reserved</p>
       </ul>
       <div class="privacy">
         <p class="text-TC">Privacy | T & C</p>
       </div>
     </footer>
     <!-- footer section -->
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- Internal scripting for the swiper  -->
+
+    <script>
+      	
+const { gsap, imagesLoaded } = window;
+
+const buttons = {
+  prev: document.querySelector(".btn--left"),
+  next: document.querySelector(".btn--right"),
+};
+
+const cardsContainerEl = document.querySelector(".cards__wrapper");
+const appBgContainerEl = document.querySelector(".app__bg");
+
+const cardInfosContainerEl = document.querySelector(".info__wrapper");
+
+ buttons.next.addEventListener("click", () => swapCards("right"));
+
+buttons.prev.addEventListener("click", () => swapCards("left"));
+
+function swapCards(direction) {
+  const currentCardEl = cardsContainerEl.querySelector(".current--card");
+  const previousCardEl = cardsContainerEl.querySelector(".previous--card");
+  const nextCardEl = cardsContainerEl.querySelector(".next--card");
+
+  const currentBgImageEl = appBgContainerEl.querySelector(".current--image");
+  const previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
+  const nextBgImageEl = appBgContainerEl.querySelector(".next--image");
+
+  changeInfo(direction);
+  swapCardsClass();
+
+  removeCardEvents(currentCardEl);
+
+  function swapCardsClass() {
+    currentCardEl.classList.remove("current--card");
+    previousCardEl.classList.remove("previous--card");
+    nextCardEl.classList.remove("next--card");
+
+    currentBgImageEl.classList.remove("current--image");
+    previousBgImageEl.classList.remove("previous--image");
+    nextBgImageEl.classList.remove("next--image");
+
+    currentCardEl.style.zIndex = "50";
+    currentBgImageEl.style.zIndex = "-2";
+
+    if (direction === "right") {
+      previousCardEl.style.zIndex = "20";
+      nextCardEl.style.zIndex = "30";
+
+      nextBgImageEl.style.zIndex = "-1";
+
+      currentCardEl.classList.add("previous--card");
+      previousCardEl.classList.add("next--card");
+      nextCardEl.classList.add("current--card");
+
+      currentBgImageEl.classList.add("previous--image");
+      previousBgImageEl.classList.add("next--image");
+      nextBgImageEl.classList.add("current--image");
+    } else if (direction === "left") {
+      previousCardEl.style.zIndex = "30";
+      nextCardEl.style.zIndex = "20";
+
+      previousBgImageEl.style.zIndex = "-1";
+
+      currentCardEl.classList.add("next--card");
+      previousCardEl.classList.add("current--card");
+      nextCardEl.classList.add("previous--card");
+
+      currentBgImageEl.classList.add("next--image");
+      previousBgImageEl.classList.add("current--image");
+      nextBgImageEl.classList.add("previous--image");
+    }
+  }
+}
+
+function changeInfo(direction) {
+  let currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+  let previousInfoEl = cardInfosContainerEl.querySelector(".previous--info");
+  let nextInfoEl = cardInfosContainerEl.querySelector(".next--info");
+
+  gsap
+    .timeline()
+    .to([buttons.prev, buttons.next], {
+      duration: 0.2,
+      opacity: 0.5,
+      pointerEvents: "none",
+    })
+    .to(
+      currentInfoEl.querySelectorAll(".text"),
+      {
+        duration: 0.4,
+        stagger: 0.1,
+        translateY: "-120px",
+        opacity: 0,
+      },
+      "-="
+    )
+    .call(() => {
+      swapInfosClass(direction);
+    })
+    .call(() => initCardEvents())
+    .fromTo(
+      direction === "right"
+        ? nextInfoEl.querySelectorAll(".text")
+        : previousInfoEl.querySelectorAll(".text"),
+      {
+        opacity: 0,
+        translateY: "40px",
+      },
+      {
+        duration: 0.4,
+        stagger: 0.1,
+        translateY: "0px",
+        opacity: 1,
+      }
+    )
+    .to([buttons.prev, buttons.next], {
+      duration: 0.2,
+      opacity: 1,
+      pointerEvents: "all",
+    });
+
+  function swapInfosClass() {
+    currentInfoEl.classList.remove("current--info");
+    previousInfoEl.classList.remove("previous--info");
+    nextInfoEl.classList.remove("next--info");
+
+    if (direction === "right") {
+      currentInfoEl.classList.add("previous--info");
+      nextInfoEl.classList.add("current--info");
+      previousInfoEl.classList.add("next--info");
+    } else if (direction === "left") {
+      currentInfoEl.classList.add("next--info");
+      nextInfoEl.classList.add("previous--info");
+      previousInfoEl.classList.add("current--info");
+    }
+  }
+}
+
+function updateCard(e) {
+  const card = e.currentTarget;
+  const box = card.getBoundingClientRect();
+  const centerPosition = {
+    x: box.left + box.width / 2,
+    y: box.top + box.height / 2,
+  };
+  let angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
+  gsap.set(card, {
+    "--current-card-rotation-offset": `${angle}deg`,
+  });
+  const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+  gsap.set(currentInfoEl, {
+    rotateY: `${angle}deg`,
+  });
+}
+
+function resetCardTransforms(e) {
+  const card = e.currentTarget;
+  const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
+  gsap.set(card, {
+    "--current-card-rotation-offset": 0,
+  });
+  gsap.set(currentInfoEl, {
+    rotateY: 0,
+  });
+}
+
+function initCardEvents() {
+  const currentCardEl = cardsContainerEl.querySelector(".current--card");
+  currentCardEl.addEventListener("pointermove", updateCard);
+  currentCardEl.addEventListener("pointerout", (e) => {
+    resetCardTransforms(e);
+  });
+}
+
+initCardEvents();
+
+function removeCardEvents(card) {
+  card.removeEventListener("pointermove", updateCard);
+}
+
+function init() {
+  let tl = gsap.timeline();
+
+  tl.to(cardsContainerEl.children, {
+    delay: 0.15,
+    duration: 0.5,
+    stagger: {
+      ease: "power4.inOut",
+      from: "right",
+      amount: 0.1,
+    },
+    "--card-translateY-offset": "0%",
+  })
+    .to(
+      cardInfosContainerEl
+        .querySelector(".current--info")
+        .querySelectorAll(".text"),
+      {
+        delay: 0.5,
+        duration: 0.4,
+        stagger: 0.1,
+        opacity: 1,
+        translateY: 0,
+      }
+    )
+    .to(
+      [buttons.prev, buttons.next],
+      {
+        duration: 0.4,
+        opacity: 1,
+        pointerEvents: "all",
+      },
+      "-=0.4"
+    );
+}
+
+const waitForImages = () => {
+  const images = [...document.querySelectorAll("img")];
+  const totalImages = images.length;
+  let loadedImages = 0;
+  const loaderEl = document.querySelector(".loader span");
+
+  gsap.set(cardsContainerEl.children, {
+    "--card-translateY-offset": "100vh",
+  });
+  gsap.set(
+    cardInfosContainerEl
+      .querySelector(".current--info")
+      .querySelectorAll(".text"),
+    {
+      translateY: "40px",
+      opacity: 0,
+    }
+  );
+  gsap.set([buttons.prev, buttons.next], {
+    pointerEvents: "none",
+    opacity: "0",
+  });
+
+  images.forEach((image) => {
+    imagesLoaded(image, (instance) => {
+      if (instance.isComplete) {
+        loadedImages++;
+        let loadProgress = loadedImages / totalImages;
+
+        gsap.to(loaderEl, {
+          duration: 1,
+          scaleX: loadProgress,
+          backgroundColor: `hsl(${loadProgress * 120}, 100%, 50%`,
+        });
+
+        if (totalImages == loadedImages) {
+          gsap
+            .timeline()
+            .to(".loading__wrapper", {
+              duration: 0.8,
+              opacity: 0,
+              pointerEvents: "none",
+            })
+            .call(() => init());
+        }
+      }
+    });
+  });
+};
+
+waitForImages();
+
+    </script>
   </body>
 </html>

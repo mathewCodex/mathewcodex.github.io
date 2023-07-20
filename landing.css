@@ -55,10 +55,14 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  width:100%;
+}
 body {
+  width:100%;
   font-family: var(--ff-secondary);
   /* background-color: linear-gradient(to right, #00000079, #28bfda); */
-  background: whitesmoke;
+   background: rgb(11, 6, 6);
   color: var(--clr-grey-1);
   line-height: 1.5s;
   font-size: 0.875rem;
@@ -874,5 +878,4 @@ white{
   color:white;
 }
 }
-
 
