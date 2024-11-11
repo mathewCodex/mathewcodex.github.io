@@ -374,14 +374,27 @@ body {
   --card-transition-easing: ease;
 }
 
+.skillstext {
+  color: white;
+  transform: translate(-10%, -17rem);
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .sectionSlider {
   width: 100vw;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.787);
   overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .sectionSlider {
+    height: 90vh;
+  }
 }
 
 button {
@@ -475,12 +488,20 @@ button:focus {
 .cardList__btn.btn--right {
   right: -5%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .cardList__btn.btn--left {
     left: 15%;
   }
   .cardList__btn.btn--right {
     right: 14%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardList__btn.btn--left {
+    left: 22%;
+  }
+  .cardList__btn.btn--right {
+    right: 22%;
   }
 }
 .cardList__btn .icon {
